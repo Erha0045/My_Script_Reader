@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xml>
+<sample>
     <name>Erhan</name>
     <age>41</age>
     <hobbies>
@@ -7,4 +7,4 @@
         <hobby>Motorbike</hobby>
         <hobby>Coding</hobby>
     </hobbies>
-</xml>
+</sample>
