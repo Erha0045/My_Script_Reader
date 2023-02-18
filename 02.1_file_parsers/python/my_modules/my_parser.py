@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 class ClassParser:
     # def __init__(self):
     #     pass
-
+  
     def parse_txt_file(self, file_path):
         with open(file_path, "r") as f:
             #return f.read()
