@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/newroute', (req, res) => {
-    res.send({message: 'secodn route!'});
+    res.send({message: 'second route!'});
 });
 
 app.listen(8080, () => console.log('Server started on port', 8080));
