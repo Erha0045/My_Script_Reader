@@ -3,9 +3,18 @@ const app = express();
 
 app.get('/date', (req, res) => {
     res.send(new Date());
+    // res.send({message: 'Hello  from node!'});
+});
+//For at kunne sende dato og tekst samtidig
+app.get('/dateAndtext', (req, res) => {
+    const mydate = new Date();
+    const myText = "Hello from nodejs";
+    const combined = myText + " " + mydate;
+    res.send(combined);
 });
 
-//for at de to services kan kommunikere
+//This code is defining a route in a Node.js server that retrieves the current date 
+//from a FastAPI server and sends it back to the client making the request.
 app.get('/datefromfastapi', async(req, res) => {
 /*task get date from fastapi. Complete the folowing:*/
     const response = await fetch('http://127.0.0.1:8000/date');
@@ -13,12 +22,9 @@ app.get('/datefromfastapi', async(req, res) => {
     res.send(date);
 });
 
-//for at kunne tilgå ngrok
-app.get('/test', (req, res) => {
-    res.send("Hello from erhan");
-});
 
-const PORT = 8080;
+
+const PORT = 8081;
 app.listen(PORT,() => console.log("Server runnig on port ", PORT));
 
 
