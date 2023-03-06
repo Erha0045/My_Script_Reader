@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Documents</title>
+    </head>
+    <body>
+        <h1>Server Sent Events</h1>
+        <div id="server sent data"></div>
+        <script>
+            const eventSource = new EventSource('https://localhost:8000/sse');
+            const serverSentData = document.getElementById('server sent data');
+
+            eventSource.addEventListener("new_message", (event) => {
+                serverSentDataDiv.innerText = event.data;
+            });
+ 
+            eventSource.addEventListener("end",(event) => {
+                console.log("handling event");
+                eventSource.close();
+            });
+        </script>
+        
+    </body>
+</html>
