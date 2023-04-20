@@ -272,3 +272,4 @@ poetry.toml
 # ruff
 .ruff_cache/
 
+Mandatory_2/my-SSO-app/src/environments/environment.ts
